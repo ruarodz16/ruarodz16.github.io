@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio | Business Analytics & Operations</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Ruben Aaron Rodriguez | Professional Portfolio</title>
 
     <style>
         :root {
@@ -40,10 +43,16 @@
             text-decoration: underline;
         }
 
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 25px;
+        }
+
         header {
-            border-bottom: 1px solid var(--border);
             background: #101a2c;
-            padding: 20px 8%;
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
         }
 
         nav {
@@ -60,36 +69,26 @@
             color: white;
         }
 
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
         .nav-links a {
-            margin-left: 20px;
             color: var(--muted);
             font-size: 14px;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 0 25px;
-        }
-
         .hero {
-            padding: 100px 0 85px;
+            padding: 85px 0;
+            display: flex;
+            align-items: center;
+            gap: 45px;
         }
 
-        .hero h1 {
-            font-size: clamp(36px, 6vw, 60px);
-            line-height: 1.15;
-            margin: 15px 0;
-        }
-
-        .hero h1 span {
-            color: var(--accent);
-        }
-
-        .hero p {
-            max-width: 750px;
-            color: var(--muted);
-            font-size: 18px;
+        .hero-content {
+            flex: 1;
         }
 
         .eyebrow {
@@ -100,9 +99,49 @@
             font-size: 13px;
         }
 
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 58px);
+            line-height: 1.15;
+            margin: 15px 0;
+            color: white;
+        }
+
+        .hero h2 {
+            color: var(--accent);
+            font-size: 24px;
+            font-weight: normal;
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        .profile-photo {
+            width: 260px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 3px solid var(--accent);
+        }
+
+        .photo-placeholder {
+            width: 260px;
+            height: 300px;
+            border: 2px dashed var(--border);
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--muted);
+            padding: 20px;
+            background: var(--card);
+        }
+
         .button {
             display: inline-block;
-            margin-top: 25px;
+            margin: 15px 10px 0 0;
             padding: 12px 24px;
             background: var(--accent);
             color: #071321;
@@ -115,8 +154,14 @@
             text-decoration: none;
         }
 
+        .button-secondary {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+
         section {
-            padding: 55px 0;
+            padding: 50px 0;
         }
 
         h2 {
@@ -125,8 +170,8 @@
         }
 
         h3 {
-            margin-top: 0;
             color: white;
+            margin-top: 0;
         }
 
         p {
@@ -146,10 +191,6 @@
             padding: 25px;
         }
 
-        .card p {
-            margin-bottom: 0;
-        }
-
         .tags {
             display: flex;
             flex-wrap: wrap;
@@ -158,8 +199,8 @@
 
         .tag {
             padding: 8px 14px;
-            border: 1px solid var(--border);
             background: var(--card);
+            border: 1px solid var(--border);
             border-radius: 6px;
             color: #cbd5e1;
             font-size: 14px;
@@ -179,17 +220,23 @@
             font-size: 14px;
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 750px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 55px 0;
+            }
+
             .grid {
                 grid-template-columns: 1fr;
             }
 
-            .nav-links a {
-                margin: 0 12px 0 0;
+            nav {
+                justify-content: center;
             }
 
-            .hero {
-                padding: 65px 0;
+            .hero h1 {
+                font-size: 38px;
             }
 
             section {
@@ -204,7 +251,9 @@
     <!-- Navigation -->
     <header>
         <nav class="container">
-            <div class="logo">Professional Portfolio</div>
+            <div class="logo">
+                Ruben Aaron Rodriguez
+            </div>
 
             <div class="nav-links">
                 <a href="#about">About</a>
@@ -220,47 +269,78 @@
     <main class="container">
 
         <!-- Introduction -->
-       <div class="hero">
-    <div class="eyebrow">
-        Business Analytics & Strategic Operations
-    </div>
+        <div class="hero">
 
-    <h1>Ruben Aaron Rodriguez</h1>
+            <div class="hero-content">
 
-    <h2>Turning Data Into Better Business Decisions.</h2>
+                <div class="eyebrow">
+                    Business Analytics & Strategic Operations
+                </div>
 
-    <p>
-        My professional background includes financial analysis,
-        procurement, program management, and emergency management.
-        I am interested in using data analytics to improve
-        organizational performance, manage operational risks,
-        and support strategic decision-making.
-    </p>
+                <h1>Ruben Aaron Rodriguez</h1>
 
-    <a class="button" href="#projects">
-        Explore My Projects
-    </a>
-</div>
+                <h2>
+                    Turning Data Into Better Business Decisions.
+                </h2>
 
-        <!-- About -->
+                <p>
+                    My professional background includes financial
+                    analysis, procurement, program management,
+                    and emergency management. I use data to
+                    improve organizational performance, support
+                    financial planning, and identify operational
+                    risks.
+                </p>
+
+                <a class="button" href="#projects">
+                    View My Projects
+                </a>
+
+                <!-- Replace resume.pdf with your uploaded PDF -->
+                <a class="button button-secondary"
+                   href="resume.pdf"
+                   target="_blank">
+                    View My Resume
+                </a>
+
+            </div>
+
+            <!-- Replace placeholder with professional photo -->
+            <div class="photo-placeholder">
+                Professional Photo
+                <br>
+                Coming Soon
+            </div>
+
+        </div>
+
+        <!-- About Me -->
         <section id="about">
             <h2>About Me</h2>
 
             <p>
-                I have experience working across public-sector
-                operations, procurement, financial planning,
-                and program management. My work has involved
-                analyzing financial information, managing
-                supplier relationships, improving processes,
-                and supporting organizational objectives.
+                I have professional experience in financial
+                analysis, procurement, contract administration,
+                program management, and emergency preparedness.
+                My work has included capital project financial
+                oversight, budget forecasting, supplier
+                management, and operational reporting.
             </p>
 
             <p>
-                My interests are focused on business analytics,
-                operational risk management, business strategy,
-                and organizational growth. I enjoy identifying
-                opportunities to improve efficiency and using
-                data to support better decisions.
+                I earned both my bachelor's and master's
+                degrees in Homeland Security and Emergency
+                Preparedness from Virginia Commonwealth
+                University. I am currently pursuing graduate
+                studies at Old Dominion University, with
+                coursework in computer science and data
+                analytics.
+            </p>
+
+            <p>
+                My professional interests include business
+                intelligence, financial forecasting, strategic
+                operations, and operational risk management.
             </p>
         </section>
 
@@ -273,19 +353,20 @@
                 <div class="card">
                     <h3>Financial Analysis</h3>
                     <p>
-                        Capital project budgeting, forecasting,
-                        variance analysis, financial reporting,
-                        and long-term financial planning.
+                        Capital project budgeting, financial
+                        forecasting, variance analysis,
+                        expenditure tracking, and reporting.
+                        Experience supporting a capital project
+                        portfolio of approximately $90 million.
                     </p>
                 </div>
 
                 <div class="card">
                     <h3>Procurement & Contracts</h3>
                     <p>
-                        Supplier management, contract
-                        administration, procurement compliance,
-                        vendor negotiations, and purchasing
-                        operations.
+                        Contract administration, supplier
+                        management, procurement compliance,
+                        sourcing, and purchasing operations.
                     </p>
                 </div>
 
@@ -293,18 +374,19 @@
                     <h3>Program Management</h3>
                     <p>
                         Cross-functional coordination, supplier
-                        relationships, process improvements,
-                        operational reporting, and program
-                        performance.
+                        relationships, process improvement,
+                        operational reporting, and performance
+                        management.
                     </p>
                 </div>
 
                 <div class="card">
                     <h3>Risk & Emergency Management</h3>
                     <p>
-                        Risk assessment, business continuity,
-                        emergency preparedness, and identifying
-                        operational vulnerabilities.
+                        Emergency preparedness, business
+                        continuity, operational risk assessment,
+                        and identifying organizational
+                        vulnerabilities.
                     </p>
                 </div>
 
@@ -319,7 +401,6 @@
                 <span class="tag">Python</span>
                 <span class="tag">SQL</span>
                 <span class="tag">Microsoft Excel</span>
-                <span class="tag">Tableau</span>
                 <span class="tag">Data Analysis</span>
                 <span class="tag">Data Visualization</span>
                 <span class="tag">Financial Forecasting</span>
@@ -328,6 +409,7 @@
                 <span class="tag">Risk Assessment</span>
                 <span class="tag">SAP ERP</span>
                 <span class="tag">Salesforce</span>
+                <span class="tag">SharePoint</span>
             </div>
         </section>
 
@@ -340,13 +422,8 @@
                 <div class="card">
                     <h3>Old Dominion University</h3>
                     <p>
-                        Graduate studies in Computer Science,
-                        Information and Communications
-                        Technology concentration.
-                    </p>
-                    <p>
-                        Current coursework includes Data Science
-                        and Analytics.
+                        Graduate Studies in Computer Science
+                        and Data Analytics.
                     </p>
                 </div>
 
@@ -370,34 +447,37 @@
             <h2>Data Analytics Projects</h2>
 
             <div class="card">
+
                 <div class="project-status">
-                    PROJECT IN PLANNING
+                    PROJECT IN PROGRESS
                 </div>
 
                 <h3>
-                    Government Procurement Spending,
-                    Financial Forecasting & Vendor Risk
+                    FEMA Procurement Spending,
+                    Financial Forecasting & Vendor Risk Analysis
                 </h3>
 
                 <p>
-                    A proposed data science project examining
-                    government procurement records to identify
-                    spending patterns, forecast future contract
-                    obligations, and evaluate vendor concentration
-                    and operational risk indicators.
+                    A data science project using federal
+                    procurement transaction records to analyze
+                    contract obligation trends, forecast
+                    future financial obligations, and examine
+                    vendor concentration and operational risk.
                 </p>
 
                 <p>
-                    Planned techniques include data cleaning,
+                    Techniques include data cleaning,
                     exploratory data analysis, visualization,
-                    statistical analysis, and predictive modeling
-                    using Python.
+                    statistical analysis, and predictive
+                    modeling using Python.
                 </p>
 
-                <p>
-                    Project results and Google Colab notebooks
-                    will be added as the project progresses.
-                </p>
+                <a href="https://colab.research.google.com/drive/1Pzn-kSvsMbqfzwBraKO79mzDWnfFgV4k"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View Project Notebook
+                </a>
+
             </div>
         </section>
 
@@ -406,8 +486,8 @@
             <h2>Connect</h2>
 
             <p>
-                View my repositories and data analytics projects
-                on GitHub.
+                View my repositories and data analytics
+                projects on GitHub.
             </p>
 
             <a href="https://github.com/ruarodz16"
@@ -420,8 +500,12 @@
     </main>
 
     <footer>
-        Professional Portfolio | Business Analytics & Operations
+        Ruben Aaron Rodriguez |
+        Business Analytics & Strategic Operations
     </footer>
+
+</body>
+</html>
 
 </body>
 </html>
